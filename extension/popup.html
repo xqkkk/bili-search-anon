@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+  :root { --pink: #fb7299; --gray: #c9ccd0; --text: #18191c; --sub: #9499a0; --line: #e3e5e7; }
+  body { margin: 0; padding: 14px 16px; width: 230px; font: 13px/1.5 system-ui, "PingFang SC", "Microsoft YaHei", sans-serif; color: var(--text); background: #fff; }
+  .row { display: flex; align-items: center; justify-content: space-between; }
+  .title { font-weight: 600; font-size: 14px; }
+  .status { margin-right: 8px; font-size: 13px; color: var(--sub); }
+  .on .status { color: var(--pink); }
+  .switch { position: relative; flex-shrink: 0; width: 36px; height: 20px; border: 0; padding: 0; border-radius: 10px; background: var(--gray); cursor: pointer; transition: background .2s; }
+  .switch::after { content: ""; position: absolute; top: 2px; left: 2px; width: 16px; height: 16px; border-radius: 50%; background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,.2); transition: transform .2s; }
+  .on .switch { background: var(--pink); }
+  .on .switch::after { transform: translateX(16px); }
+  .switch:focus-visible { outline: 2px solid var(--pink); outline-offset: 2px; }
+  .hint { margin: 10px 0 0; font-size: 12px; color: var(--sub); }
+  .opt { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--line); font-size: 13px; }
+  .opt .switch { width: 30px; height: 17px; }
+  .opt .switch::after { width: 13px; height: 13px; }
+  .opt.on .switch::after { transform: translateX(13px); }
+</style>
+</head>
+<body>
+  <div class="row" id="box">
+    <span class="title">匿名搜索</span>
+    <span class="row">
+      <span class="status" id="status">…</span>
+      <button class="switch" id="sw" role="switch" aria-checked="false" aria-label="匿名搜索开关"></button>
+    </span>
+  </div>
+  <p class="hint" id="hint">开启后，搜索结果不受个性化推荐影响。</p>
+  <label class="row opt" id="optBox">
+    <span>在B站搜索框中显示开关</span>
+    <button class="switch" id="optSw" role="switch" aria-checked="false" aria-label="在B站搜索框中显示开关"></button>
+  </label>
+  <script src="popup.js"></script>
+</body>
+</html>
