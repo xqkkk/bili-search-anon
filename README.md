@@ -2,6 +2,8 @@
 
 一个极简 Chrome 扩展：在 B 站网页端搜索时不携带登录信息，获得非个性化的搜索结果；看视频、评论、收藏仍保持登录。
 
+**[➜ 从 Chrome 应用商店安装](https://chromewebstore.google.com/detail/fcaobiifgpobipiehpkfaibfdfdffpoh)**
+
 ![扩展截图](docs/screenshot.png)
 
 ## 为什么需要它
@@ -19,9 +21,11 @@
 
 ## 安装
 
-### 从 Chrome 应用商店安装
+### 从 Chrome 应用商店安装（推荐）
 
-审核中，上架后会在这里更新链接。
+打开 [Chrome 应用商店页面](https://chromewebstore.google.com/detail/fcaobiifgpobipiehpkfaibfdfdffpoh)，点击「添加至 Chrome」。从商店安装的扩展会自动更新。
+
+Edge 用户也可以从这里安装：打开页面后，按提示允许安装来自其他应用商店的扩展即可。
 
 ### 手动安装
 
@@ -29,7 +33,7 @@
 2. 在 Chrome 地址栏打开 `chrome://extensions`，打开右上角的「开发者模式」。
 3. 点击「加载已解压的扩展程序」，选择解压出的 `bili-search-anon` 文件夹。
 
-Edge 等基于 Chromium 的浏览器也可以用同样的方法安装。
+Edge 等基于 Chromium 的浏览器也可以用同样的方法手动安装。
 
 ## 工作原理
 
